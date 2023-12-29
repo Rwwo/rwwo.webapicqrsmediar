@@ -1,38 +1,38 @@
-### Introdução ao Padrão CQRS
+# IntroduÃ§Ã£o ao PadrÃ£o CQRS
 ## Quando usar o CQRS
 ## MediatR
 
-## Pré-requisitos
+## PrÃ©-requisitos
 * Visual Studio 2022
 * PostgreSQL
 * .NET Core 6
 
-## Introdução ao Padrão CQRS
-CQRS significa Command and Query Responsibility Segregation e é utilizado para separar as operações de leitura (consultas) das operações de escrita (comandos).
+### IntroduÃ§Ã£o ao PadrÃ£o CQRS
+CQRS significa Command and Query Responsibility Segregation e Ã© utilizado para separar as operaÃ§Ãµes de leitura (consultas) das operaÃ§Ãµes de escrita (comandos).
 
-Nesse contexto, as consultas realizam operações de leitura, enquanto os comandos realizam operações de escrita, como criar, atualizar,
+Nesse contexto, as consultas realizam operaÃ§Ãµes de leitura, enquanto os comandos realizam operaÃ§Ãµes de escrita, como criar, atualizar,
 excluir e retornar dados.
 
-Como sabemos, em nossa aplicação, geralmente utilizamos um único modelo de dados para ler e escrever dados, o que funciona bem e permite realizar 
-operações CRUD facilmente. No entanto, quando a aplicação se torna extensa, nossas consultas passam a retornar diferentes tipos de dados como objeto,
-tornando difícil gerenciar diferentes objetos DTO. Além disso, o mesmo modelo é utilizado para realizar operações de escrita, resultando em um modelo 
+Como sabemos, em nossa aplicaÃ§Ã£o, geralmente utilizamos um Ãºnico modelo de dados para ler e escrever dados, o que funciona bem e permite realizar 
+operaÃ§Ãµes CRUD facilmente. No entanto, quando a aplicaÃ§Ã£o se torna extensa, nossas consultas passam a retornar diferentes tipos de dados como objeto,
+tornando difÃ­cil gerenciar diferentes objetos DTO. AlÃ©m disso, o mesmo modelo Ã© utilizado para realizar operaÃ§Ãµes de escrita, resultando em um modelo 
 complexo.
 
-Além disso, ao usar o mesmo modelo para operações de leitura e escrita, a segurança também se torna difícil de gerenciar quando a aplicação é grande,
-e a entidade pode expor dados no contexto errado devido à carga de trabalho no mesmo modelo. O CQRS ajuda a desacoplar as operações e torna a aplicação
-mais escalável e flexível em grande escala.
+AlÃ©m disso, ao usar o mesmo modelo para operaÃ§Ãµes de leitura e escrita, a seguranÃ§a tambÃ©m se torna difÃ­cil de gerenciar quando a aplicaÃ§Ã£o Ã© grande,
+e a entidade pode expor dados no contexto errado devido Ã  carga de trabalho no mesmo modelo. O CQRS ajuda a desacoplar as operaÃ§Ãµes e torna a aplicaÃ§Ã£o
+mais escalÃ¡vel e flexÃ­vel em grande escala.
 
-## Quando utilizar o CQRS
+### Quando utilizar o CQRS
 
-Podemos utilizar a Segregação de Responsabilidades de Comando e Consulta (CQRS) quando a aplicação é extensa e acessa os mesmos dados em paralelo.
-O CQRS ajuda a reduzir conflitos de mesclagem ao realizar várias operações com os dados.
+Podemos utilizar a SegregaÃ§Ã£o de Responsabilidades de Comando e Consulta (CQRS) quando a aplicaÃ§Ã£o Ã© extensa e acessa os mesmos dados em paralelo.
+O CQRS ajuda a reduzir conflitos de mesclagem ao realizar vÃ¡rias operaÃ§Ãµes com os dados.
 
-Em termos de Domain-Driven Design (DDD), se o modelo de dados do domínio for complexo e precisar realizar muitas operações com prioridade,
-como validações e execução de lógica de negócios, nesse caso, precisamos da consistência que será alcançada utilizando o CQRS.
+Em termos de Domain-Driven Design (DDD), se o modelo de dados do domÃ­nio for complexo e precisar realizar muitas operaÃ§Ãµes com prioridade,
+como validaÃ§Ãµes e execuÃ§Ã£o de lÃ³gica de negÃ³cios, nesse caso, precisamos da consistÃªncia que serÃ¡ alcanÃ§ada utilizando o CQRS.
 
-## Padrão MediatR
+### PadrÃ£o MediatR
 
-O padrão MediatR ajuda a reduzir a dependência direta entre múltiplos objetos e a torná-los colaborativos por meio do MediatR. No .NET Core, 
-o MediatR fornece classes que ajudam a comunicar eficientemente com vários objetos de maneira desacoplada.
+O padrÃ£o MediatR ajuda a reduzir a dependÃªncia direta entre mÃºltiplos objetos e a tornÃ¡-los colaborativos por meio do MediatR. No .NET Core, 
+o MediatR fornece classes que ajudam a comunicar eficientemente com vÃ¡rios objetos de maneira desacoplada.
 
-![Resultado API](./images/swagger.png)
+![Resultado API](./images/Swagger.png)
